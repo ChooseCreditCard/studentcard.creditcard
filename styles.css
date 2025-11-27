@@ -1,151 +1,193 @@
-:root {
-  --bg: #0b1220;
-  --panel: #0f172a;
-  --text: #e6eefc;
-  --muted: #9fb3d1;
-  --line: #1c2840;
-  --acc: #38bdf8;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-* { box-sizing: border-box; }
+  <title>CryptoPay.Creditcard – Crypto to Card Payments Explained</title>
+  <meta name="description"
+        content="How crypto-to-card payments work: off-ramp cards, stablecoin spending and on-chain to Visa/Mastercard rails. A focused spoke in The CreditCard Collection." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://cryptopay.creditcard/" />
 
-html, body {
-  margin: 0;
-  padding: 0;
-  background: var(--bg);
-  color: var(--text);
-  font: 16px/1.6 system-ui, Segoe UI, Roboto, Inter;
-}
+  <!-- Open Graph -->
+  <meta property="og:title" content="CryptoPay.Creditcard – Crypto to Card Payments Explained" />
+  <meta property="og:description"
+        content="Learn how crypto cards convert BTC/ETH/USDC into spendable card transactions, including fees, limits and conversion models." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cryptopay.creditcard/" />
+  <meta property="og:image" content="https://cryptopay.creditcard/preview.png" />
 
-a {
-  color: var(--acc);
-  text-decoration: none;
-}
-a:hover { opacity: .85; }
+  <!-- Styles -->
+  <link rel="stylesheet" href="/styles.css" />
 
-.wrap {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 24px;
-}
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-64FE63JQ3H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-64FE63JQ3H');
+  </script>
+</head>
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 24px;
-  border-bottom: 1px solid var(--line);
-  background: rgba(11, 18, 32, 0.6);
-  backdrop-filter: blur(6px);
-}
+<body class="bg-slate-950 text-slate-100">
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 600;
-}
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="nav-inner max-w-6xl">
 
-.cc-logo {
-  height: 32px;
-  width: 32px;
-  border-radius: 50%;
-  background: var(--acc);
-  color: #071018;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  font-weight: 700;
-}
+      <div class="brand">
+        <div class="cc-logo">CC</div>
+        <div class="brand-text">
+          <span class="brand-title">CryptoPay.creditcard</span>
+          <span class="brand-subtitle">Crypto → Card Rails</span>
+        </div>
+      </div>
 
-.links {
-  display: flex;
-  gap: 16px;
-  font-size: 14px;
-}
+      <nav class="nav-links">
+        <a href="https://fin.creditcard/?utm_source=cryptopay.creditcard&utm_medium=nav">Collection</a>
+        <a href="https://tech.creditcard/crypto?utm_source=cryptopay.creditcard&utm_medium=nav">Tech</a>
+        <a href="https://choose.creditcard/?utm_source=cryptopay.creditcard&utm_medium=nav">Choose</a>
+      </nav>
 
-.hero {
-  background: linear-gradient(180deg, rgba(56,189,248,.12), transparent);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 32px 28px;
-  margin: 32px 0;
-}
+    </div>
+  </header>
 
-.hero h1 {
-  margin: 0 0 8px;
-  font-size: 32px;
-  font-weight: 700;
-}
+  <main class="cc-page">
 
-.hero p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 15px;
-}
+    <p class="cc-breadcrumb">CryptoPay.creditcard · Crypto · Rails</p>
 
-.cta {
-  display: inline-block;
-  margin-top: 16px;
-  padding: 12px 16px;
-  border-radius: 10px;
-  background: var(--acc);
-  color: #071018;
-  font-weight: 700;
-  font-size: 15px;
-}
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Crypto to Card Payments</h1>
+      <p class="hero-lead">
+        How BTC, ETH and stablecoins become card transactions at the terminal.
+      </p>
+      <a class="cta"
+         href="https://choose.creditcard/compare?utm_source=cryptopay.creditcard&utm_medium=referral&utm_campaign=cryptopay_top">
+        Compare Crypto-Friendly Cards
+      </a>
+    </section>
 
-.section {
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 24px;
-  margin: 16px 0;
-  background: var(--panel);
-}
+    <!-- What is crypto-to-card -->
+    <section class="section">
+      <h2>What is a crypto card?</h2>
+      <p class="small">
+        A crypto card lets you spend digital assets through normal card rails (Visa/Mastercard).
+        Your crypto is converted to fiat either in advance or at the moment of purchase.
+      </p>
+      <ul class="list">
+        <li>Pay using physical card, virtual card or wallet</li>
+        <li>Merchant always receives local currency</li>
+        <li>Conversion handled by the card issuer/exchange partner</li>
+        <li>Some cards reward you in crypto</li>
+      </ul>
+    </section>
 
-.section h2 {
-  margin: 0 0 10px;
-  font-size: 20px;
-  font-weight: 600;
-}
+    <!-- Models -->
+    <section class="section">
+      <h2>Main crypto-to-card models</h2>
 
-.list {
-  margin: 12px 0 0;
-  padding: 0;
-  list-style: none;
-  color: var(--muted);
-  font-size: 15px;
-}
+      <div class="cluster-grid">
+        <div class="cluster-card">
+          <h3>Custodial card</h3>
+          <p class="small">Provider holds your BTC/ETH and auto-sells at transaction time.</p>
+        </div>
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 14px;
-  margin-top: 12px;
-}
+        <div class="cluster-card">
+          <h3>Stablecoin spending</h3>
+          <p class="small">Hold value in USDC/USDT and convert at swipe/tap time.</p>
+        </div>
 
-.card {
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 16px;
-  background: rgba(2, 6, 23, 0.5);
-}
+        <div class="cluster-card">
+          <h3>Preloaded balance</h3>
+          <p class="small">Convert crypto in advance and spend from a fixed fiat balance.</p>
+        </div>
 
-.card h3 {
-  margin: 0 0 6px;
-  font-size: 17px;
-}
+        <div class="cluster-card">
+          <h3>On-chain loyalty</h3>
+          <p class="small">Traditional card but rewards are paid out as tokens.</p>
+        </div>
+      </div>
+    </section>
 
-.small {
-  font-size: 14px;
-  color: var(--muted);
-}
+    <!-- Fees -->
+    <section class="section">
+      <h2>Fees, spreads and limits</h2>
 
-.footer {
-  opacity: .75;
-  color: var(--muted);
-  font-size: 13px;
-  margin: 24px 0 40px;
-  text-align: center;
-}
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+          <tr><th>Cost element</th><th>What to check</th></tr>
+          </thead>
+          <tbody>
+          <tr><td>FX spread</td><td>Hidden mark-up between crypto price and execution.</td></tr>
+          <tr><td>Conversion fee</td><td>Percent/flat fee on each crypto→fiat conversion.</td></tr>
+          <tr><td>Network fees</td><td>Costs for deposits/withdrawals on-chain.</td></tr>
+          <tr><td>ATM fees</td><td>Often higher for crypto-linked products.</td></tr>
+          <tr><td>Limits</td><td>Daily/monthly caps on spending or conversion.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Risk -->
+    <section class="section">
+      <h2>Risk, regions and regulation</h2>
+      <p class="small">Crypto-to-card products vary hugely by region:</p>
+      <ul class="list">
+        <li>KYC/AML requirements are standard</li>
+        <li>Some countries restrict crypto card usage</li>
+        <li>Provider risk — what if issuer/exchange fails?</li>
+        <li>Tax implications differ by jurisdiction</li>
+      </ul>
+    </section>
+
+    <!-- Links -->
+    <section class="section">
+      <h2>Dig deeper or compare products</h2>
+
+      <div class="cluster-grid">
+        <a class="cluster-card"
+           href="https://tech.creditcard/crypto?utm_source=cryptopay.creditcard&utm_medium=referral">
+          <h3>Tech.Creditcard / Crypto rails</h3>
+          <p class="small">Tokenization, stablecoins & on-chain issuing.</p>
+        </a>
+
+        <a class="cluster-card"
+           href="https://cryptocards.creditcard/?utm_source=cryptopay.creditcard&utm_medium=referral">
+          <h3>CryptoCards.creditcard</h3>
+          <p class="small">Overview of crypto-linked card categories.</p>
+        </a>
+
+        <a class="cluster-card"
+           href="https://choose.creditcard/compare?utm_source=cryptopay.creditcard&utm_medium=referral&utm_campaign=cryptopay_bottom">
+          <h3>Compare real cards</h3>
+          <p class="small">See differences in fees, limits & rewards.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="section">
+      <h2>See which crypto cards fit your needs</h2>
+      <p class="small">CryptoPay.creditcard explains the systems. For actual products:</p>
+      <a class="cta"
+         href="https://choose.creditcard/compare?utm_source=cryptopay.creditcard&utm_medium=referral&utm_campaign=cryptopay_bottom">
+        Open Compare on Choose.Creditcard
+      </a>
+    </section>
+
+  </main>
+
+  <!-- MINI FOOTER -->
+  <footer class="mini-footer">
+    <p class="mini-footer-main">© 2025 The CreditCard Collection — ronarn AS</p>
+    <p class="mini-footer-contact">
+      Contact: <a href="mailto:support@cc.creditcard">support@cc.creditcard</a>
+    </p>
+  </footer>
+
+</body>
+</html>
